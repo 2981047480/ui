@@ -83,10 +83,9 @@
     .arco-btn-primary, .arco-btn-primary[type="button"], .arco-btn-primary[type="submit"] {
         color: #fff;
         border-radius: 10px;
-        background: #7b219f;
-        box-shadow: inset 20px -20px 40px #671c86,
-                    inset -20px 20px 40px #8f26b8;
-        background-color: rgb(165, 18, 165);
+        background-color: #7b219f;
+        box-shadow: inset 6px -6px 26px #5d1979,
+                    inset -6px 6px 26px #9929c5;
         height: 40px;
         width: 350px;
         border: 0px;
