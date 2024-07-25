@@ -2,7 +2,7 @@
     <div class="login-component-wapper">
         <a-form class="login-component" :model="form" @submit="ClickHandler">
             <div class="title">登录</div>
-            <div>
+            <div class="login-form">
                 <a-form-item field="username" label="用户名">
                     <a-input v-model="form.username" placeholder="请输入用户名">
                         <template #prefix>
@@ -23,9 +23,11 @@
                     </a-checkbox>
                 </a-form-item>
             </div>
-            <a-button class="submit-button" type="primary" html-type="submit" :loading="isLoading" @click="LoadingHandler" auto-label-width>
-                submit
-            </a-button>
+            <div class="submit-buttom">
+                <a-button type="primary" html-type="submit" :loading="isLoading" @click="LoadingHandler" auto-label-width>
+                    submit
+                </a-button>
+            </div>
         </a-form>
     </div>
 </template>
@@ -55,6 +57,7 @@
     .title{
         font-size: 30px;
         color: var(--color-neutral-8);
+        padding-top: 15px;
         margin: auto;
         margin-bottom: 25px;
     }
@@ -62,36 +65,45 @@
     .login-component-wapper{
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.594);
+        display: flex;
+        background: #C6FFDD;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
     
-    .login-component{
+    .login-component {
         height: 300px;
         width: 500px;
         margin: auto;
+        border-radius: 10px;
         background-color: #FFF;
+        border: solid 1px var(--color-neutral-3);
     }
    
     .arco-btn-primary, .arco-btn-primary[type="button"], .arco-btn-primary[type="submit"] {
         color: #fff;
+        border-radius: 10px;
+        background: #7b219f;
+        box-shadow: inset 20px -20px 40px #671c86,
+                    inset -20px 20px 40px #8f26b8;
         background-color: rgb(165, 18, 165);
         height: 40px;
-        border: 1px solid transparent;
-        margin: 3px;
+        width: 350px;
+        border: 0px;
+        padding: 0px;
+        margin: 0px;
     }
-    
-    .arco-input-wrapper .arco-input {
-        width: 100%;
-        padding-right: 10;
-        padding-left: 0;
-        color: inherit;
-        line-height: 1.5715;
-        background: none;
-        border: none;
-        border-radius: 0;
-        outline: none;
-        cursor: inherit;
-        -webkit-appearance: none;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    .submit-buttom {
+        width: 350px;
+        margin: auto;
+    }
+
+    .login-form {
+        width: 350px;
+        height: 130px;
+        margin: auto;
+        margin-bottom: 0px;
+        margin-top: 0px;
     }
 </style>
